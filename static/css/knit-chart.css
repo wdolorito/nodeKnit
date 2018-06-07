@@ -218,8 +218,33 @@
   transform: rotate(135deg);
 }
 
+.lsli::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: black;
+  left: 14px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
-.lsli {}
+.lsli::after {
+  content: "";
+  width: 13px;
+  height: 2px;
+  background: black;
+  left: 8px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 .slpwyb {}
 
