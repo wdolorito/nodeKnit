@@ -134,7 +134,33 @@
 
 }
 
-.k1fb {}
+.k1fb::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: black;
+  left: 5px;
+  top: 14px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.k1fb::after {
+  content: "";
+  width: 13px;
+  height: 1px;
+  background: black;
+  left: 4px;
+  top: 10px;
+  position: absolute;
+  -moz-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
 
 .mkk {}
 
