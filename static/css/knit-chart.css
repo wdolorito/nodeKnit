@@ -162,7 +162,12 @@
   transform: rotate(40deg);
 }
 
-.mkk {}
+.mkk::after {
+  content: "M";
+  left: 7px;
+  top: 0px;
+  position: absolute;
+}
 
 .mpp {}
 
