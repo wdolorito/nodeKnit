@@ -65,7 +65,32 @@
   transform: rotate(135deg);
 }
 
-.p2tog {}
+.p2tog::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: black;
+  left: 4px;
+  top: 14px;
+  position: absolute;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.p2tog::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: black;
+  left: 6px;
+  top: 6px;
+  position: absolute;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
 
 .ssk {}
 
@@ -105,7 +130,15 @@
 
 .bobble {}
 
-.nost {}
+.nost::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: gainsboro;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
 
 .inc1to3 {}
 
