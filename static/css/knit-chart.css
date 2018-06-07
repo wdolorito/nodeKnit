@@ -51,7 +51,19 @@
   border-radius: 8px;
 }
 
-.k2tog {}
+.k2tog::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: black;
+  left: 4px;
+  top: 14px;
+  position: absolute;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
 
 .p2tog {}
 
