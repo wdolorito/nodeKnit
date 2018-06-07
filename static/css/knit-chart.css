@@ -1,55 +1,55 @@
-.knit {
+.box {
   width: 30px;
   height: 30px;
-  background: black;
+  background: white;
   left: 0px;
   top: 0px;
   position: relative;
+  border: solid;
+  border-width: 1px;
 }
 
 .knit::after {
-  content: "";
-  width: 28px;
-  height: 28px;
-  background: white;
-  left: 1px;
-  top: 1px;
-  position: absolute;
-}
-
-.purl::before {
-  content: "";
-  width: 28px;
-  height: 28px;
-  background: white;
-  left: 1px;
-  top: 1px;
-  position: absolute;
-}
-
-.purl {
-  width: 30px;
-  height: 30px;
-  background: black;
-  left: 0px;
-  top: 0px;
-  position: relative;
 }
 
 .purl::after {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: black;
   left: 11px;
   top: 11px;
   position: absolute;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
-.yo {}
+.yo::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: black;
+  left: 5px;
+  top: 5px;
+  position: absolute;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.yo::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  left: 6px;
+  top: 6px;
+  position: absolute;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
 
 .k2tog {}
 
