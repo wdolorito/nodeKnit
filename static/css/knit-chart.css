@@ -1,7 +1,43 @@
-.knit {}
+.box {
+  width: 30px;
+  height: 30px;
+  background: #000000;
+  left: 0px;
+  top: 0px;
+  position: relative;
+}
 
-.purl {}
+.box:before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF;
+  left: 1px;
+  top: 1px;
+  position: absolute;
+}
 
+.knit {
+}
+
+.purl {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid red;
+}
+
+.purl:before {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid red;
+    border-image: linear-gradient(to right, red, blue);
+}
+
+.purl:after {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid red;
+    box-s
 .yo {}
 
 .k2tog {}
