@@ -165,11 +165,16 @@
 .mkk::after {
   content: "M";
   left: 7px;
-  top: 0px;
+  top: 1px;
   position: absolute;
 }
 
-.mpp {}
+.mpp::after {
+  content: "MP";
+  left: 3px;
+  top: 1px;
+  position: absolute;
+}
 
 .rsm {}
 
