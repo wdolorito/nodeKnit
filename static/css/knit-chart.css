@@ -246,7 +246,33 @@
   transform: rotate(45deg);
 }
 
-.slpwyb {}
+.slpwyb::before {
+  content: "";
+  width: 12px;
+  height: 1px;
+  background: black;
+  left: 10px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(115deg);
+  -webkit-transform: rotate(115deg);
+  -ms-transform: rotate(115deg);
+  transform: rotate(115deg);
+}
+
+.slpwyb::after {
+  content: "";
+  width: 12px;
+  height: 1px;
+  background: black;
+  left: 5px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(65deg);
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
 
 .slpwyf {}
 
