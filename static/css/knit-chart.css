@@ -176,7 +176,12 @@
   position: absolute;
 }
 
-.rsm {}
+.rsm::after {
+  content: "MR";
+  left: 2px;
+  top: 1px;
+  position: absolute;
+}
 
 .lsm {}
 
