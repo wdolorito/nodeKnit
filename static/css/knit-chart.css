@@ -183,7 +183,12 @@
   position: absolute;
 }
 
-.lsm {}
+.lsm::after {
+  content: "ML";
+  left: 3px;
+  top: 1px;
+  position: absolute;
+}
 
 .rsli {}
 
