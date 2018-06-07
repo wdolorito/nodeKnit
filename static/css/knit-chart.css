@@ -190,7 +190,34 @@
   position: absolute;
 }
 
-.rsli {}
+.rsli::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: black;
+  left: 5px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rsli::after {
+  content: "";
+  width: 13px;
+  height: 2px;
+  background: black;
+  left: 8px;
+  top: 13px;
+  position: absolute;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
 
 .lsli {}
 
