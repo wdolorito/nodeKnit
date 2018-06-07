@@ -1,43 +1,54 @@
-.box {
+.knit {
   width: 30px;
   height: 30px;
-  background: #000000;
+  background: black;
   left: 0px;
   top: 0px;
   position: relative;
 }
 
-.box:before {
+.knit::after {
   content: "";
   width: 28px;
   height: 28px;
-  background: #FFFFFF;
+  background: white;
   left: 1px;
   top: 1px;
   position: absolute;
 }
 
-.knit {
+.purl::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: white;
+  left: 1px;
+  top: 1px;
+  position: absolute;
 }
 
 .purl {
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 80px solid red;
+  width: 30px;
+  height: 30px;
+  background: black;
+  left: 0px;
+  top: 0px;
+  position: relative;
 }
 
-.purl:before {
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 80px solid red;
-    border-image: linear-gradient(to right, red, blue);
+.purl::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: black;
+  left: 11px;
+  top: 11px;
+  position: absolute;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 
-.purl:after {
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 80px solid red;
-    box-s
 .yo {}
 
 .k2tog {}
