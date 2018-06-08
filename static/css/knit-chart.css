@@ -436,7 +436,56 @@
   transform: rotate(90deg);
 }
 
-.sk2p {}
+.sk2p::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: black;
+  left: 6px;
+  top: 12px;
+  position: absolute;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sk2p::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background: black;
+  left: 6px;
+  top: 15px;
+  position: absolute;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.box.sk2p i {
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.box.sk2p i::after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  left: 10px;
+  top: 15px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
 .sssp {}
 
