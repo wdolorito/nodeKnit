@@ -487,7 +487,69 @@
   transform: rotate(90deg);
 }
 
-.sssp {}
+.sssp::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: black;
+  left: 6px;
+  top: 12px;
+  position: absolute;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sssp::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background: black;
+  left: 6px;
+  top: 15px;
+  position: absolute;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.box.sssp i::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: black;
+  left: 14px;
+  top: 7px;
+  position: absolute;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.box.sssp i {
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.box.sssp i::after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  left: 10px;
+  top: 15px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
 .s2kp2 {}
 
