@@ -289,7 +289,8 @@
 }
 
 .slpwyf {
-  background: linear-gradient(to bottom, white, white 99%, black, white, white);
+  background: linear-gradient(to right, white 10%, transparent, white 85%),
+              linear-gradient(to bottom, white 50%, black 50%, white 60%);
 }
 
 .slpwyf::after {
