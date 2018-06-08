@@ -288,11 +288,6 @@
   transform: rotate(115deg);
 }
 
-.slpwyf {
-  background: linear-gradient(to right, white 10%, transparent, white 85%),
-              linear-gradient(to bottom, white 50%, black 50%, white 60%);
-}
-
 .slpwyf::after {
   content: "";
   width: 12px;
@@ -305,6 +300,25 @@
   -webkit-transform: rotate(65deg);
   -ms-transform: rotate(65deg);
   transform: rotate(65deg);
+}
+
+.box.slpwyf i {
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.box.slpwyf i::after {
+  content: "";
+  width: 12px;
+  height: 1px;
+  left: 7px;
+  top: 13px;
+  position: absolute;
+  background: black;
 }
 
 .k3tog {}
