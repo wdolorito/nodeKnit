@@ -551,7 +551,34 @@
   transform: rotate(90deg);
 }
 
-.s2kp2 {}
+.s2kp2::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  left: 9px;
+  top: 11px;
+  position: absolute;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.s2kp2::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  left: 11px;
+  top: 14px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
 .k1tbl {}
 
