@@ -898,6 +898,14 @@
   transform: rotate(45deg);
 }
 
-.strn {}
-
+.strn::after {
+  content: "L";
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 30px;
+  height: 30px;
+  left: 9px;
+  top: -4px;
+  position: absolute;
+}
 .caston {}
