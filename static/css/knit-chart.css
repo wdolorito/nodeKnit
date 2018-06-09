@@ -908,4 +908,33 @@
   top: -4px;
   position: absolute;
 }
-.caston {}
+
+.caston::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  left: 9px;
+  top: 14px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.caston::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+  left: 14px;
+  top: 9px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
