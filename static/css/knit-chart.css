@@ -748,7 +748,27 @@
   position: absolute;
 }
 
-.inc1to5 {}
+.inc1to5::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  left: 9px;
+  top: 6px;
+  position: absolute;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.inc1to5::after {
+  content: "5";
+  left: 10px;
+  top: -4px;
+  position: absolute;
+}
 
 .dec4to1rs {}
 
