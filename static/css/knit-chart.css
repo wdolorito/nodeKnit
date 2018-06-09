@@ -584,7 +584,7 @@
   content: "";
   width: 5px;
   height: 16px;
-  left: 10px;
+  left: 11px;
   top: 5px;
   position: absolute;
   border-top: solid 1px black;
@@ -616,7 +616,63 @@
   border-radius: 5px;
 }
 
-.p1tbl {}
+.p1tbl::before {
+  content: "";
+  width: 5px;
+  height: 16px;
+  left: 11px;
+  top: 5px;
+  position: absolute;
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.p1tbl::after {
+  content: "";
+  width: 16px;
+  height: 5px;
+  left: 8px;
+  top: 10px;
+  position: absolute;
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.box.p1tbl i::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background: black;
+  left: 13px;
+  top: 7px;
+  position: absolute;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.box.p1tbl i {
+  content: "";
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
 
 .bobble {}
 
