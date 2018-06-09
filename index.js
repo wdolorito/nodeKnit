@@ -20,6 +20,10 @@ router.get('/', function(req, res) {
   res.sendFile(views + '/index.html')
 })
 
+router.get('/chart', function(req, res) {
+  res.sendFile(views + '/chart.html')
+})
+
 app.use('/', router)
 
 app.use('*', function(req,res) {
