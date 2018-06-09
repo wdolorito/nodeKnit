@@ -836,7 +836,27 @@
   position: absolute;
 }
 
-.dec5to1 {}
+.dec5to1::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  left: 9px;
+  top: 6px;
+  position: absolute;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.dec5to1::after {
+  content: "5";
+  left: 10px;
+  top: 3px;
+  position: absolute;
+}
 
 .k1yo2 {}
 
