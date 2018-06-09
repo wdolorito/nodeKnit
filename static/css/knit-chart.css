@@ -792,7 +792,27 @@
   position: absolute;
 }
 
-.dec4to1ls {}
+.dec4to1ls::before {
+  content: "";
+  width: 12px;
+  height: 6px;
+  left: 9px;
+  top: 7px;
+  position: absolute;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.dec4to1ls::after {
+  content: "4";
+  left: 9px;
+  top: 3px;
+  position: absolute;
+}
 
 .dec4to1cen::before {
   content: "";
