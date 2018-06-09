@@ -674,7 +674,18 @@
   position: absolute;
 }
 
-.bobble {}
+.bobble::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: black;
+  left: 7px;
+  top: 7px;
+  position: absolute;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
 
 .nost::after {
   content: "";
