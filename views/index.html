@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/css/knit-chart.css">
+    <link rel="stylesheet" href="/css/pattern-area.css">
 
-    <title>Make your knit pattern!</title>
+    <title>Create your own knit pattern!</title>
 </head>
 
   <body>
@@ -66,26 +67,47 @@
         <div class="col">
           <div class="container">
             <div class="row">
-              <div class="col-2">
-                <div class="col">Row 1</div>
-                <div class="col">
-                  <input class="form-control" type="number" value="6">
+              <div class="col">
+                <div id="pattern-area">
+                    <table id="pattern-table">
+                      <tbody>
+                        <tr>
+                          <th>
+                            <div>Row 1</div>
+                            <input class="form-control mr-5" type="number" value="15">
+                          </th>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                          <td><div class="box knit"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-              </div>
-              <div class="col form-inline">
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
-                <div class="box knit"></div>
               </div>
             </div>
             <div class="row">
@@ -119,6 +141,8 @@
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/pattern.js"></script>
   </body>
 
 </html>
