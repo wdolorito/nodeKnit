@@ -1,10 +1,14 @@
-#pattern-area {
+.pattern-area {
 	max-width: 600px;
 	white-space: nowrap;
 	oveflow-x: hidden;
 	vertical-align: center;
 }
 
-#pattern-table {
+.pattern-table {
 	overflow: auto;
+}
+
+.row-info {
+	width: 65px;
 }
