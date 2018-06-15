@@ -1,60 +1,70 @@
 $(document).ready(function() {
   const blank = '                        <td><div class="box knit"></div></td>'
-  const blankRow = '  <div class="row">\n'
-                 + '    <div class="col">\n'
-                 + '      <div class="pattern-area">\n'
-                 + '          <table class="pattern-table">\n'
-                 + '            <tbody>\n'
-                 + '              <tr>\n'
-                 + '                <th>\n'
-                 + '                  <div class="row-info">Row</div>\n'
-                 + '                  <input id="blank-spinner" class="row-info form-control" type="number" min="0" value="10">\n'
-                 + '                </th>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '                <td><div class="box knit"></div></td>\n'
-                 + '              </tr>\n'
-                 + '            </tbody>\n'
-                 + '          </table>\n'
-                 + '        </div>\n'
-                 + '      </div>\n'
-                 + '    </div>\n'
 
-  $('#add-row').on('click', function(){
+  function returnBlankRow(num) {
+    var blankRow = '  <div class="row">\n'
+                   + '    <div class="col">\n'
+                   + '      <div class="pattern-area">\n'
+                   + '          <table class="pattern-table">\n'
+                   + '            <tbody>\n'
+                   + '              <tr>\n'
+                   + '                <th>\n'
+                   + '                  <div class="row-info">Row ' + num + '</div>\n'
+                   + '                  <input class="row-spinner row-info form-control" type="number" min="0" value="10" oldValue="10">\n'
+                   + '                </th>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box knit"></div></td>\n'
+                   + '              </tr>\n'
+                   + '            </tbody>\n'
+                   + '          </table>\n'
+                   + '        </div>\n'
+                   + '      </div>\n'
+                   + '    </div>\n'
+
+    return blankRow
+  }
+
+  $('.add-row').on('click', function() {
       var pat = $('#pattern-area')
+      var newLen = $(pat).children().length + 1
+      var newRow = returnBlankRow(newLen)
+      $(pat).append(newRow)
       console.log('added row')
-      $(pat).append(blankRow)
+      console.log(newLen)
   })
 
-  $('#rem-row').on('click', function(){
+  $('.rem-row').on('click', function() {
     var pat = $('#pattern-area')
     $(pat).children().last().remove()
     console.log('removed row')
   })
 
-  $('#row-1-spinner').on('focusin', function(){
-        $(this).attr('oldValue', this.value);
+  $(document).on('focusin', '.row-spinner', function() {
+    console.log(this.value)
+    $(this).attr('oldValue', this.value)
+    console.log($(this).attr('oldValue'))
   })
 
-  $('#row-1-spinner').bind('input', function(){
+  $(document).on('input', '.row-spinner', function() {
     var parent = this.parentNode.parentNode
     var prev = $(this).attr('oldValue')
     var curr = this.value
     var dir = curr - prev
 
-    console.log(prev)
-    console.log(curr)
-    console.log(blankRow)
+    console.log('Previous: ' + prev)
+    console.log('Current: ' + curr)
 
     if(dir >= -1) {
       switch(dir) {
+        case 0:
         case 1:
           console.log('added')
           $(parent).append(blank)
