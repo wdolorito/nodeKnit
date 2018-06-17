@@ -1,27 +1,37 @@
 $(document).ready(function() {
-  const blank = '                        <td><div class="box knit"></div></td>'
+  const blank = '                        <td><div class="box stitch"></div></td>'
 
   function returnBlankRow(num) {
     var blankRow = '  <div class="row">\n'
                    + '    <div class="col">\n'
-                   + '      <div class="pattern-area">\n'
+                   + '      <div class="container">\n'
                    + '          <table class="pattern-table">\n'
                    + '            <tbody>\n'
                    + '              <tr>\n'
                    + '                <th>\n'
                    + '                  <div class="row-info">Row ' + num + '</div>\n'
-                   + '                  <input class="row-spinner row-info form-control" type="number" min="0" value="10" oldValue="10">\n'
+                   + '                  <input class="row-spinner row-info form-control" type="number" min="0" value="20" oldValue="20" onkeydown="return false">\n'
                    + '                </th>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
-                   + '                <td><div class="box knit"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
+                   + '                <td><div class="box stitch"></div></td>\n'
                    + '              </tr>\n'
                    + '            </tbody>\n'
                    + '          </table>\n'
@@ -75,8 +85,6 @@ $(document).ready(function() {
           break
       }
       $(this).trigger('focusin')
-    } else {
-      console.log("you tried to go negative")
     }
   })
 })
