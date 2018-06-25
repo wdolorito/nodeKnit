@@ -3,6 +3,7 @@ $(document).ready(function() {
 
   const stitchMenu = '            <div class="dropdown-divider"></div>\n'
                    + '            <div class="box menu-item"></div>\n'
+                   + '            <div class="box menu-item color"></div>\n'
                    + '            <div class="box menu-item purl"></div>\n'
                    + '            <div class="box menu-item yo"></div>\n'
                    + '            <div class="box menu-item k2tog"></div>\n'
@@ -130,7 +131,7 @@ $(document).ready(function() {
     var parent = this.parentNode
     var parentParent = parent.parentNode
     console.log($(this).attr('class'))
-    $(this).removeClass('stitch')
+    if($(this).hasClass('stitch')) { $(this).removeClass('stitch') }
     console.log($(this).attr('class'))
     console.log(parent)
     console.log(parentParent)
@@ -142,12 +143,14 @@ $(document).ready(function() {
   $(document).on('click', '.menu-item', function() {
     var parent = this.parentNode
     var parentParent = parent.parentNode
+    var parentParentLength = $(parentParent).find('.menu-item').length
     console.log($(this).attr('class'))
-    $(this).removeClass('menu-item')
+    if($(this).hasClass('menu-item')) { $(this).removeClass('menu-item') }
     $(this).addClass('stitch')
     $(parent).empty()
     $(parent).append($(this))
-    $(parentParent).removeClass('align-top')
-    console.log(parent)
+    if($(parentParent).hasClass('align-top') && (parentParentLength == 36)) {
+       $(parentParent).removeClass('align-top')
+    }
   })
 })

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/knit-chart.css">
+    <link rel="stylesheet" href="/css/pattern-area.css">
+
+    <title>Create your own crochet pattern!</title>
+</head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Crochet pattern editor</h1>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light my-4">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link active" href="#">Crochet pattern editor</a>
+            <a class="nav-item nav-link" href="/knit">Knit pattern editor</a>
+            <a class="nav-item nav-link" href="/chart/crochet">Crochet symbols legend</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col-2 text-center">
+          <div>Pattern is worked:</div>
+          <label class="radio-inline"><input type="radio" name="knit-radio">Flat</label>
+          <label class="radio-inline"><input type="radio" name="knit-radio">In Round</label>
+          <button type="button" class="add-row mb-2 btn btn-success">Add Row</button>
+          <button type="button" class="rem-row mb-2 btn btn-danger">Remove Row</button>
+          <button type="button" class="mt-2 btn btn-primary">Print pattern</button>
+        </div>
+
+        <div class="pattern-area col">
+          <div class="row">
+            <div class="col">
+              <div class="container">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>
+                          <div class="row-info">Row 1</div>
+                          <input class="row-spinner row-info form-control" type="number" min="0" value="20" oldValue="20" onkeydown="return false">
+                        </th>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch purl"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                        <td><div class="box stitch"></div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/pattern.js"></script>
+  </body>
+
+</html>
