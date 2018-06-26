@@ -12,7 +12,7 @@
 </head>
 
   <body>
-    <div class="container">
+    <div class="container mb-5">
       <div class="jumbotron">
         <h1 class="display-4">About me</h1>
       </div>
@@ -32,12 +32,61 @@
         </div>
       </nav>
 
-      <div class="row">
+      <div class="row mb-5">
         <div class="col"></div>
-        <div class="col-6">
+        <div class="col-9">
           <div class="card">
             <div class="card-body">
-              <p class="card-text">Like working with yarn?  Same.  I put this together to practice some web programming and make a custom tool for one of my hobbies.  Maybe you might find it useful as well.  :-D</p>
+              <h1 class="card-title">Site junk</h1>
+              <p class="card-text">This site was built using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.</p>
+              <p class="card-text">Styling components are Twitter's <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> if y'all hadn't guessed. ;)</p>
+              <p class="card-text">It's super simple and only incorporates the <a href="https://expressjs.com/" target="_blank">Express</a> framework and can conceivably run on pretty much anything.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col"></div>
+        <div class="col-9">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">Me</h1>
+              <p class="card-text">There's not much to say about myself other than I willingly identify as any pejorative you would have to describe someone who knows a little too much about nothing.</p>
+              <p class="card-text">I'm in to lots of clich&eacute; tech things. I'm a filthy casual that likes watching (a little too much) other people way more skilled at button mashing than myself on Twitch.</p>
+              <h3 class="card-text">I'm also a really big fan of yarn work!!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-9">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">Got something to say?</h1>
+              <form method="post">
+                <div class="form-group">
+                  <label for="textarea1">Name</label>
+                  <textarea name="name" class="form-control" id="textarea1" rows="1" placeholder="A Name"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="input1">Email address</label>
+                  <input name="email" type="email" class="form-control" id="input1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="textarea2">Subject</label>
+                  <textarea name="subject" class="form-control" id="textarea2" rows="1" placeholder="Howdy!"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="textarea3">Message</label>
+                  <textarea name="message" class="form-control" id="textarea3" rows="3" placeholder="Your site is handy!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Send me an email!</button>
+              </form>
             </div>
           </div>
         </div>

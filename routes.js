@@ -39,4 +39,9 @@ router.get('*', function(req,res) {
   res.sendFile(views +  '/404.html')
 })
 
+router.post('/about', function(req,res) {
+  console.log(req.body)
+  res.sendFile(views +  '/emailed.html')
+})
+
 module.exports = router;
