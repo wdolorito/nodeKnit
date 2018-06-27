@@ -124,5 +124,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# nodemailer credentails
+gmail-credentials.json
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows

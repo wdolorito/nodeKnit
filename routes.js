@@ -2,6 +2,20 @@ const express = require('express');
 const router = express.Router();
 const views = __dirname + '/views'
 
+// generate app specific password at https://myaccount.google.com/apppasswords
+// create gmail-credentials.json with the following:
+// {
+//   "user": "aUser@gmail.com",
+//   "pass": "abcdefghijklmnop"
+// }
+
+const credentials = require('./gmail-credentials.json')
+const send = require('gmail-send')({
+  user: credentials.user,
+  pass: credentials.pass,
+  to:   credentials.user,
+})
+
 router.use(function (req, res, next) {
   console.log(req.path + ' ' + req.method)
   next()
@@ -40,7 +54,24 @@ router.get('*', function(req,res) {
 })
 
 router.post('/about', function(req,res) {
-  console.log(req.body)
+  var name = req.body.name
+  var email = req.body.email
+  var subject = req.body.subject
+  var message = req.body.message
+  console.log(name)
+  console.log(email)
+  console.log(subject)
+  console.log(message)
+  console.log('sending email from ' + name + ' with address: ' + email);
+
+  send({
+    replyTo: email,
+    subject: subject,
+    html:    name + ' has sent a message:</br></br>' + message
+  }, function (err, res) {
+    console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
+  })
+
   res.sendFile(views +  '/emailed.html')
 })
 

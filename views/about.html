@@ -71,19 +71,45 @@
               <form method="post">
                 <div class="form-group">
                   <label for="textarea1">Name</label>
-                  <textarea name="name" class="form-control" id="textarea1" rows="1" placeholder="A Name"></textarea>
+                  <textarea name="name"
+                            class="form-control"
+                            id="textarea1"
+                            rows="1"
+                            placeholder="A Name"
+                            oninvalid="this.setCustomValidity('Let me know your first name')"
+                            oninput="setCustomValidity('')"
+                            required></textarea>
                 </div>
                 <div class="form-group">
                   <label for="input1">Email address</label>
-                  <input name="email" type="email" class="form-control" id="input1" placeholder="name@example.com">
+                  <input name="email"
+                         type="email"
+                         class="form-control"
+                         id="input1"
+                         placeholder="name@example.com"
+                         required></input>
                 </div>
                 <div class="form-group">
                   <label for="textarea2">Subject</label>
-                  <textarea name="subject" class="form-control" id="textarea2" rows="1" placeholder="Howdy!"></textarea>
+                  <textarea name="subject"
+                            class="form-control"
+                            id="textarea2"
+                            rows="1"
+                            placeholder="Howdy!"
+                            oninvalid="this.setCustomValidity('What\'s on your mind?')"
+                            oninput="setCustomValidity('')"
+                            required></textarea>
                 </div>
                 <div class="form-group">
                   <label for="textarea3">Message</label>
-                  <textarea name="message" class="form-control" id="textarea3" rows="3" placeholder="Your site is handy!"></textarea>
+                  <textarea name="message"
+                            class="form-control"
+                            id="textarea3"
+                            rows="3"
+                            placeholder="Your site is handy!"
+                            oninvalid="this.setCustomValidity('A little more detail is required.')"
+                            oninput="setCustomValidity('')"
+                            required></textarea>
                 </div>
                 <button type="submit" class="btn btn-default">Send me an email!</button>
               </form>
