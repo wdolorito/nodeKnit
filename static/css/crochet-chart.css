@@ -1,0 +1,85 @@
+.box {
+  width: 30px;
+  height: 30px;
+  background: white;
+  margin: auto;
+  position: relative;
+  border: solid;
+  border-width: 1px;
+}
+
+.chain::before {
+  width: 20px;
+  height: 10px;
+  left: 1px;
+  top: 1px;
+  position: absolute;
+  border-width: 2px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.slst::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: black;
+  left: 11px;
+  top: 11px;
+  position: absolute;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.sc {
+}
+
+.hdc {
+}
+
+.dc {
+}
+
+.tr {
+}
+
+.dtr {
+}
+
+.sc2tog {
+}
+
+.sc3tog {
+}
+
+.dc2tog {
+}
+
+.dc3tog {
+}
+
+.tdccluster {
+}
+
+.thdccluster {
+}
+
+.fdcpop {
+}
+
+.ch3picot {
+}
+
+.fpdc {
+}
+
+.bpdc {
+}
+
+.blo {
+}
+
+.flo {
+}
