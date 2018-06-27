@@ -18,7 +18,13 @@
       </div>
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light my-4">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -26,7 +32,19 @@
             <a class="nav-item nav-link" href="/">Home</a>
             <a class="nav-item nav-link" href="/crochet">Crochet pattern editor</a>
             <a class="nav-item nav-link" href="/knit">Knit pattern editor</a>
-            <a class="nav-item nav-link" href="/chart">Symbols legend</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"
+                 href="/chart"
+                 id="navbarDropdown"
+                 role="button"
+                 data-toggle="dropdown"
+                 aria-haspopup="true"
+                 aria-expanded="false">Symbols legend</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/chart/crochet">Crochet</a>
+                <a class="dropdown-item" href="/chart/knit">Knit</a>
+              </div>
+            </div>
             <a class="nav-item nav-link active" href="#">About</a>
           </div>
         </div>
@@ -39,7 +57,7 @@
             <div class="card-body">
               <h1 class="card-title">Site junk</h1>
               <p class="card-text">This site was built using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.</p>
-              <p class="card-text">Styling components are Twitter's <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> if y'all hadn't guessed. ;)</p>
+              <p class="card-text">Styling components are Twitter's <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> if y'all hadn't guessed. ;) With the default theme no less because I have no imagination, hah</p>
               <p class="card-text">It's super simple and only incorporates the <a href="https://expressjs.com/" target="_blank">Express</a> framework and can conceivably run on pretty much anything.</p>
             </div>
           </div>
