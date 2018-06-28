@@ -2,8 +2,8 @@ $(document).ready(function() {
   const blank = '                        <td><div class="box stitch"></div></td>'
 
   const stitchMenu = '            <div class="dropdown-divider"></div>\n'
-                   + '            <div class="box menu-item"></div>\n'
                    + '            <div class="box menu-item color"></div>\n'
+                   + '            <div class="box menu-item"></div>\n'
                    + '            <div class="box menu-item purl"></div>\n'
                    + '            <div class="box menu-item yo"></div>\n'
                    + '            <div class="box menu-item k2tog"></div>\n'
