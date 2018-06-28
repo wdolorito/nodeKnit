@@ -275,7 +275,28 @@
   background: black;
 }
 
-.dc3tog {
+.box.sc2tog.dc2tog.dc3tog u:before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  left: 5px;
+  top: 13px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.box.sc2tog.dc2tog.dc3tog u:after{
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 11px;
+  top: 17px;
+  position: absolute;
+  background: black;
 }
 
 .tdccluster {
