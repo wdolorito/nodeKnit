@@ -87,10 +87,46 @@
   position: absolute;
 }
 
-.dc {
+.box.hdc.dc i::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 12px;
+  top: 12px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 
-.tr {
+.box.hdc.tr i::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 12px;
+  top: 11px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.box.hdc.tr i::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 12px;
+  top: 14px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 
 .dtr {
