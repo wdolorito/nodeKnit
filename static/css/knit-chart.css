@@ -872,7 +872,7 @@
   top: 8px;
   position: absolute;
   border: solid 1px black;
-  border-bottom: 0;
+  border-bottom: 0px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
