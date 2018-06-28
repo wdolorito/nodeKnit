@@ -223,7 +223,56 @@
   background: black;
 }
 
-.dc2tog {
+.box.dc2tog.sc2tog i::before {
+  content: "";
+  width: 6px;
+  height: 1px;
+  left: 5px;
+  top: 14px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.box.sc2tog.dc2tog i::before {
+  content: "";
+  width: 6px;
+  height: 1px;
+  left: 5px;
+  top: 14px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.box.sc2tog.dc2tog i::after {
+  content: "";
+  width: 6px;
+  height: 1px;
+  left: 16px;
+  top: 14px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.box.sc2tog.dc2tog b::before {
+  content: "";
+  width: 9px;
+  height: 1px;
+  left: 9px;
+  top: 4px;
+  position: absolute;
+  background: black;
 }
 
 .dc3tog {
