@@ -129,7 +129,18 @@
   transform: rotate(15deg);
 }
 
-.dtr {
+.box.hdc.tr.dtr b:before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 12px;
+  top: 17px;
+  position: absolute;
+  background: black;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 
 .sc2tog {
