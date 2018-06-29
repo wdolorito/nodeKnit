@@ -625,6 +625,14 @@
   transform: rotate(40deg);
 }
 
+.fdcshell::before {
+
+}
+
+.fdcshell::after {
+
+}
+
 .ch3picot {
 }
 
