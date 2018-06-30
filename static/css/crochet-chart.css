@@ -626,11 +626,201 @@
 }
 
 .fdcshell::before {
-
+  content: "";
+  width: 1px;
+  height: 14px;
+  left: 20px;
+  top: 10px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
 }
 
 .fdcshell::after {
+  content: "";
+  width: 1px;
+  height: 14px;
+  left: 7px;
+  top: 10px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(145deg);
+  -webkit-transform: rotate(145deg);
+  -ms-transform: rotate(145deg);
+  transform: rotate(145deg);
+}
 
+.fdcshell i::before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  left: 17px;
+  top: 8px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.fdcshell i::after {
+  content: "";
+  width: 1px;
+  height: 14px;
+  left: 11px;
+  top: 8px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+
+.fdcshell b::before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  left: 14px;
+  top: 4px;
+  background: black;
+  position: absolute;
+}
+
+.fdcshell b::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 12px;
+  top: 4px;
+  background: black;
+  position: absolute;
+}
+
+.fdcshell u::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 6px;
+  top: 7px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+
+.fdcshell u::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 18px;
+  top: 7px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.fdcshell del::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 1px;
+  top: 11px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+
+.fdcshell del::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 22px;
+  top: 11px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.fdcshell ins::before {
+  content: "";
+  width: 3px;
+  height: 1px;
+  left: 5px;
+  top: 16px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+
+.fdcshell ins::after {
+  content: "";
+  width: 3px;
+  height: 1px;
+  left: 20px;
+  top: 16px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.fdcshell big::before {
+  content: "";
+  width: 3px;
+  height: 1px;
+  left: 9px;
+  top: 13px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+}
+
+.fdcshell big::after {
+  content: "";
+  width: 3px;
+  height: 1px;
+  left: 16px;
+  top: 13px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.fdcshell small::before {
+  content: "";
+  width: 3px;
+  height: 1px;
+  left: 13px;
+  top: 11px;
+  background: black;
+  position: absolute;
 }
 
 .ch3picot {
