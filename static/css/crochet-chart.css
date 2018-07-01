@@ -886,7 +886,61 @@
   transform: rotate(90deg);
 }
 
-.fpdc {
+.fpdc::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  left: 10px;
+  top: 15px;
+  position: absolute;
+  border: solid 1px black;
+  border-top: 0;
+  border-left: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+}
+
+.fpdc::after {
+  content: "";
+  width: 3px;
+  height: 10px;
+  left: 13px;
+  top: 6px;
+  border: solid 1px black;
+  border-top: 0;
+  border-right: 0;
+  position: absolute;
+}
+
+.fpdc i::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  left: 11px;
+  top: 6px;
+  background: black;
+  position: absolute;
+}
+
+.fpdc i::after {
+  content: "";
+  width: 3px;
+  height: 2px;
+  left: 12px;
+  top: 10px;
+  background: black;
+  position: absolute;
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
 }
 
 .bpdc {
