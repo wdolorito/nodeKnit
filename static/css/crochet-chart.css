@@ -1001,7 +1001,20 @@
 }
 
 
-.blo {
+.blo::before {
+  content: "";
+  width: 10px;
+  height: 15px;
+  left: 9px;
+  top: 10px;
+  position: absolute;
+  border: solid black 2px;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
 .flo {
