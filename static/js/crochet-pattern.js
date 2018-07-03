@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  const menuLength = 21
+
   const blank = '                        <td><div class="box stitch"></div></td>'
 
   const stitchMenu = '            <div class="dropdown-divider"></div>\n'
@@ -132,7 +134,7 @@ $(document).ready(function() {
       $(parent).children().first().addClass('stitch')
       $(parent).children().slice(1).remove()
 
-      if($(parent.parentNode).hasClass('align-top') && (parentLength == 21)) {
+      if($(parent.parentNode).hasClass('align-top') && (parentLength == menuLength)) {
          $(parent.parentNode).removeClass('align-top')
       }
     }
@@ -171,7 +173,7 @@ $(document).ready(function() {
     $(parent).empty()
     $(parent).append($(this))
     console.log(parentParentLength)
-    if($(parentParent).hasClass('align-top') && (parentParentLength == 21)) {
+    if($(parentParent).hasClass('align-top') && (parentParentLength == menuLength)) {
        $(parentParent).removeClass('align-top')
     }
   })
@@ -204,7 +206,7 @@ $(document).ready(function() {
     $(parentParent).children().first().addClass('stitch')
     $(parentParent).children().slice(1).remove()
     console.log(parentParentLength)
-    if($(parentParent.parentNode).hasClass('align-top') && (parentParentLength == 21)) {
+    if($(parentParent.parentNode).hasClass('align-top') && (parentParentLength == menuLength)) {
        $(parentParent.parentNode).removeClass('align-top')
     }
   })

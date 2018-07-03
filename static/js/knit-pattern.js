@@ -1,8 +1,10 @@
 $(document).ready(function() {
+  const menuLength = 36
+
   const blank = '                        <td><div class="box stitch"></div></td>'
 
   const stitchMenu = '            <div class="dropdown-divider"></div>\n'
-                   + '            <div class="box menu-item color"></div>\n'
+                   + '            <div class="box color-item"></div>\n'
                    + '            <div class="dropdown-divider"></div>\n'
                    + '            <div class="box menu-item"></div>\n'
                    + '            <div class="box menu-item purl"></div>\n'
@@ -40,6 +42,14 @@ $(document).ready(function() {
                    + '            <div class="box menu-item bindo"></div>\n'
                    + '            <div class="box menu-item strn"></div>\n'
                    + '            <div class="box menu-item caston"></div>\n'
+
+  const colorMenu = '            <div class="box color red-color"></div>\n'
+                 + '            <div class="box color orange-color"></div>\n'
+                 + '            <div class="box color yellow-color"></div>\n'
+                 + '            <div class="box color green-color"></div>\n'
+                 + '            <div class="box color blue-color"></div>\n'
+                 + '            <div class="box color indigo-color"></div>\n'
+                 + '            <div class="box color black-color"></div>\n'
 
   function returnBlankRow(num) {
     var blankRow = '  <div class="row">\n'
@@ -128,20 +138,45 @@ $(document).ready(function() {
     }
   })
 
+  $(document).on('click', '.box', function() {
+    if($(this).hasClass('color-item')) { return }
+    if($(this).hasClass('menu-item')) { return }
+    var parent = this.parentNode
+    var parentLength = $(parent).find('.menu-item').length
+    if(parentLength > 0) {
+      $(parent).children().first().addClass('stitch')
+      $(parent).children().slice(1).remove()
+
+      if($(parent.parentNode).hasClass('align-top') && (parentLength == menuLength)) {
+         $(parent.parentNode).removeClass('align-top')
+      }
+    }
+    console.log('++++++')
+    console.log(parent)
+    console.log(parentLength > 0)
+    console.log('++++++')
+  })
+
   $(document).on('click', '.stitch', function() {
     var parent = this.parentNode
-    var parentParent = parent.parentNode
+    var parentParent = this.parentNode.parentNode
     console.log($(this).attr('class'))
     if($(this).hasClass('stitch')) { $(this).removeClass('stitch') }
+    var lastClass = $(this).attr('class').split(' ').pop()
+    $(parent).append(stitchMenu)
+    if(lastClass.endsWith('-color')) {
+      console.log('this has a color')
+      $(parent).children().not('.color-item').addClass(lastClass)
+    }
     console.log($(this).attr('class'))
     console.log(parent)
     console.log(parentParent)
-    $(parent).append(stitchMenu)
     $(parentParent).addClass('align-top')
     console.log($(this).attr('class'))
   })
 
   $(document).on('click', '.menu-item', function() {
+    if($(this).hasClass('color')) { return }
     var parent = this.parentNode
     var parentParent = parent.parentNode
     var parentParentLength = $(parentParent).find('.menu-item').length
@@ -151,8 +186,41 @@ $(document).ready(function() {
     $(parent).empty()
     $(parent).append($(this))
     console.log(parentParentLength)
-    if($(parentParent).hasClass('align-top') && (parentParentLength == 37)) {
+    if($(parentParent).hasClass('align-top') && (parentParentLength == menuLength)) {
        $(parentParent).removeClass('align-top')
+    }
+  })
+
+  $(document).on('click', '.color-item', function() {
+    length = $(this).children().length
+    console.log(length)
+    if(length == 7) {
+      $(this).empty()
+      return
+    }
+    $(this).append(colorMenu)
+    console.log($(this))
+  })
+
+  $(document).on('click', '.color', function() {
+    var parent = this.parentNode
+    var parentParent = parent.parentNode
+    var parentParentLength = $(parentParent).find('.menu-item').length
+    var color = $(this).attr('class').split(' ')[2]
+    if(color == 'black-color') {
+      color = ''
+      console.log('it\'s black')
+    }
+    console.log('===')
+    console.log(color)
+    console.log(parentParent)
+    $(parentParent).children().first().removeClass('red-color orange-color yellow-color green-color blue-color indigo-color black-color')
+    $(parentParent).children().first().addClass(color)
+    $(parentParent).children().first().addClass('stitch')
+    $(parentParent).children().slice(1).remove()
+    console.log(parentParentLength)
+    if($(parentParent.parentNode).hasClass('align-top') && (parentParentLength == menuLength)) {
+       $(parentParent.parentNode).removeClass('align-top')
     }
   })
 })
