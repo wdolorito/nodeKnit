@@ -205,7 +205,7 @@ $(document).ready(function() {
   $(document).on('click', '.color', function() {
     var parent = this.parentNode
     var parentParent = parent.parentNode
-    var parentParentLength = $(parentParent).find('.menu-item').length
+    var parentParentLength = $(parentParent.parentNode).find('.menu-item').length
     var color = $(this).attr('class').split(' ')[2]
     if(color == 'black-color') {
       color = ''
