@@ -3,6 +3,7 @@ $(document).ready(function() {
 
   const stitchMenu = '            <div class="dropdown-divider"></div>\n'
                    + '            <div class="box menu-item color"></div>\n'
+                   + '            <div class="dropdown-divider"></div>\n'
                    + '            <div class="box menu-item"></div>\n'
                    + '            <div class="box menu-item purl"></div>\n'
                    + '            <div class="box menu-item yo"></div>\n'
@@ -149,6 +150,7 @@ $(document).ready(function() {
     $(this).addClass('stitch')
     $(parent).empty()
     $(parent).append($(this))
+    console.log(parentParentLength)
     if($(parentParent).hasClass('align-top') && (parentParentLength == 37)) {
        $(parentParent).removeClass('align-top')
     }
