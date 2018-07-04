@@ -72,4 +72,28 @@ router.post('/about', function(req, res) {
   res.sendFile(views +  '/emailed.html')
 })
 
+router.post('/print', function(req, res) {
+  var fromUrl = req.get('Referrer')
+  var fromPage = fromUrl.split('/')[3]
+  console.log(fromPage)
+
+  var view = views + '/404.html'
+
+  switch(fromPage) {
+    case 'crochet':
+      console.log('came from crochet pattern')
+      view = views + '/print-crochet.html'
+      break;
+    case 'knit':
+      console.log('came from knit pattern')
+      view = views + '/print-knit.html'
+      break;
+    case 'crochet':
+      console.log('came from somewhere else')
+      break;
+  }
+
+  res.sendFile(view)
+})
+
 module.exports = router;

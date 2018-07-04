@@ -107,6 +107,17 @@ $(document).ready(function() {
     console.log('removed row')
   })
 
+  $('.print-pattern').on('click', function() {
+    console.log('opening print page')
+    $.post('/print', function(data) {
+      console.log('received: ' + data)
+      var w = window.open()
+      w.document.open()
+      w.document.write(data)
+      w.document.close()
+    })
+  })
+
   $(document).on('focusin', '.row-spinner', function() {
     console.log(this.value)
     $(this).attr('oldValue', this.value)
