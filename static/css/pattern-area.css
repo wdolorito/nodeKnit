@@ -1,56 +1,58 @@
-.pattern-area {
-	max-width: 600px;
-	white-space: nowrap;
-	oveflow-x: hidden;
-	vertical-align: center;
-}
+@media screen {
+	.pattern-area {
+		max-width: 600px;
+		white-space: nowrap;
+		oveflow-x: hidden;
+		vertical-align: center;
+	}
 
-.pattern-table {
-	overflow: auto;
-}
+	.pattern-table {
+		overflow: auto;
+	}
 
-.row-info {
-	width: 65px;
-}
+	.row-info {
+		width: 65px;
+	}
 
-.menu-item {
-}
+	.menu-item {
+	}
 
-.color-item {
-	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-}
+	.color-item {
+		background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+	            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+	            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	}
 
-.red-color {
-	background: red;
-}
+	.red-color {
+		background: red;
+	}
 
-.orange-color {
-	background: orange;
-}
+	.orange-color {
+		background: orange;
+	}
 
-.yellow-color {
-	background: yellow;
-}
+	.yellow-color {
+		background: yellow;
+	}
 
-.green-color {
-	background: green;
-}
+	.green-color {
+		background: green;
+	}
 
-.blue-color {
-	background: blue;
-}
+	.blue-color {
+		background: blue;
+	}
 
-.indigo-color {
-	background: indigo;
-}
+	.indigo-color {
+		background: indigo;
+	}
 
-.black-color {
-	background: black;
-}
+	.black-color {
+		background: black;
+	}
 
-.color {
-	left: 30px;
-	top: -1px;
+	.color {
+		left: 30px;
+		top: -1px;
+	}	
 }

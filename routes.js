@@ -17,7 +17,7 @@ const send = require('gmail-send')({
 })
 
 router.use(function (req, res, next) {
-  console.log(req.path + ' ' + req.method)
+  console.log(Date.now() + ' ' + req.path + ' ' + req.method)
   next()
 })
 
@@ -53,24 +53,21 @@ router.get('*', function(req,res) {
   res.sendFile(views +  '/404.html')
 })
 
-router.post('/about', function(req,res) {
+router.post('/about', function(req, res) {
   var name = req.body.name
   var email = req.body.email
   var subject = req.body.subject
   var message = req.body.message
-  console.log(name)
-  console.log(email)
-  console.log(subject)
-  console.log(message)
+  console.log(req.body)
   console.log('sending email from ' + name + ' with address: ' + email);
 
-  send({
-    replyTo: email,
-    subject: subject,
-    html:    name + ' has sent a message:</br></br>' + message
-  }, function (err, res) {
-    console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
-  })
+  // send({
+  //   replyTo: email,
+  //   subject: subject,
+  //   html:    name + ' has sent a message:</br></br>' + message
+  // }, function (err, res) {
+  //   console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
+  // })
 
   res.sendFile(views +  '/emailed.html')
 })
