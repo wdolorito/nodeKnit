@@ -38,6 +38,8 @@ $(document).ready(function() {
                   + '            <div class="box color indigo-color"></div>\n'
                   + '            <div class="box color black-color"></div>\n'
 
+  var w
+
   function returnBlankRow(num) {
     var blankRow = '  <div class="row">\n'
                  + '    <div class="col">\n'
@@ -94,21 +96,14 @@ $(document).ready(function() {
     console.log('removed row')
   })
 
-  $('.print-pattern').on('click', function() {
-    console.log('opening print page')
-    $.post('/print', function(data) {
-      console.log('received: ' + data)
-      var w = window.open()
-      w.document.open()
-      w.document.write(data)
-      w.document.close()
-    })
-  })
-
   $(document).on('focusin', '.row-spinner', function() {
     console.log(this.value)
     $(this).attr('oldValue', this.value)
     console.log($(this).attr('oldValue'))
+  })
+
+  $(document).on('click', '.print-pattern', function() {
+    
   })
 
   $(document).on('input', '.row-spinner', function() {

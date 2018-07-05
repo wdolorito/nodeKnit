@@ -77,6 +77,8 @@ router.post('/print', function(req, res) {
   var fromPage = fromUrl.split('/')[3]
   console.log(fromPage)
 
+  console.log(req.body)
+
   var view = views + '/404.html'
 
   switch(fromPage) {
