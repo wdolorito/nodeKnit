@@ -1,5 +1,21 @@
 @media print {
-}
+  body {
+    -webkit-print-color-adjust: exact;
+  }
 
-@media screen {
+  .pattern-area {
+		oveflow-x: visible;
+	}
+
+  .jumbotron, .navbar, .pattern-controls, .row-info {
+    display: none;
+  }
+
+  .row-number {
+    display: block;
+  }
+
+  .box {
+    display: block;
+  }
 }

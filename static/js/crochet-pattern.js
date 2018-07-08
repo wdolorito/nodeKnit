@@ -103,7 +103,12 @@ $(document).ready(function() {
   })
 
   $(document).on('click', '.print-pattern', function() {
-    
+    var pdf = new jsPDF();
+
+    pdf.fromHTML($('body').get(0))
+
+    console.log(pdf)
+    pdf.save()
   })
 
   $(document).on('input', '.row-spinner', function() {
