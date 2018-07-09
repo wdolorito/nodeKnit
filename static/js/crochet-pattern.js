@@ -38,10 +38,10 @@ $(document).ready(function() {
                   + '            <div class="box color indigo-color"></div>\n'
                   + '            <div class="box color black-color"></div>\n'
 
-  var w
+  let w
 
   function returnBlankRow(num) {
-    var blankRow = '  <div class="row">\n'
+    let blankRow = '  <div class="row">\n'
                  + '    <div class="col">\n'
                  + '      <div class="container">\n'
                  + '          <table class="pattern-table">\n'
@@ -82,16 +82,16 @@ $(document).ready(function() {
   }
 
   $('.add-row').on('click', function() {
-      var pat = $('.pattern-area')
-      var newLen = $(pat).children().length + 1
-      var newRow = returnBlankRow(newLen)
+      let pat = $('.pattern-area')
+      let newLen = $(pat).children().length + 1
+      let newRow = returnBlankRow(newLen)
       $(pat).append(newRow)
       console.log('added row')
       console.log(newLen)
   })
 
   $('.rem-row').on('click', function() {
-    var pat = $('.pattern-area')
+    let pat = $('.pattern-area')
     $(pat).children().last().remove()
     console.log('removed row')
   })
@@ -103,19 +103,20 @@ $(document).ready(function() {
   })
 
   $(document).on('click', '.print-pattern', function() {
-    var pdf = new jsPDF();
-
-    pdf.fromHTML($('body').get(0))
-
-    console.log(pdf)
-    pdf.save()
+    console.log('printing')
+    // let pdf = new jsPDF();
+    //
+    // pdf.fromHTML($('body').get(0))
+    //
+    // console.log(pdf)
+    // pdf.save()
   })
 
   $(document).on('input', '.row-spinner', function() {
-    var parent = this.parentNode.parentNode
-    var prev = $(this).attr('oldValue')
-    var curr = this.value
-    var dir = curr - prev
+    let parent = this.parentNode.parentNode
+    let prev = $(this).attr('oldValue')
+    let curr = this.value
+    let dir = curr - prev
 
     console.log('Previous: ' + prev)
     console.log('Current: ' + curr)
@@ -139,8 +140,8 @@ $(document).ready(function() {
   $(document).on('click', '.box', function() {
     if($(this).hasClass('color-item')) { return }
     if($(this).hasClass('menu-item')) { return }
-    var parent = this.parentNode
-    var parentLength = $(parent).find('.menu-item').length
+    let parent = this.parentNode
+    let parentLength = $(parent).find('.menu-item').length
     if(parentLength > 0) {
       $(parent).children().first().addClass('stitch')
       $(parent).children().slice(1).remove()
@@ -156,11 +157,11 @@ $(document).ready(function() {
   })
 
   $(document).on('click', '.stitch', function() {
-    var parent = this.parentNode
-    var parentParent = this.parentNode.parentNode
+    let parent = this.parentNode
+    let parentParent = this.parentNode.parentNode
     console.log($(this).attr('class'))
     if($(this).hasClass('stitch')) { $(this).removeClass('stitch') }
-    var lastClass = $(this).attr('class').split(' ').pop()
+    let lastClass = $(this).attr('class').split(' ').pop()
     $(parent).append(stitchMenu)
     if(lastClass.endsWith('-color')) {
       console.log('this has a color')
@@ -176,9 +177,9 @@ $(document).ready(function() {
 
   $(document).on('click', '.menu-item', function() {
     if($(this).hasClass('color')) { return }
-    var parent = this.parentNode
-    var parentParent = parent.parentNode
-    var parentParentLength = $(parentParent).find('.menu-item').length
+    let parent = this.parentNode
+    let parentParent = parent.parentNode
+    let parentParentLength = $(parentParent).find('.menu-item').length
     console.log($(this).attr('class'))
     if($(this).hasClass('menu-item')) { $(this).removeClass('menu-item') }
     $(this).addClass('stitch')
@@ -202,10 +203,10 @@ $(document).ready(function() {
   })
 
   $(document).on('click', '.color', function() {
-    var parent = this.parentNode
-    var parentParent = parent.parentNode
-    var parentParentLength = $(parentParent.parentNode).find('.menu-item').length
-    var color = $(this).attr('class').split(' ')[2]
+    let parent = this.parentNode
+    let parentParent = parent.parentNode
+    let parentParentLength = $(parentParent.parentNode).find('.menu-item').length
+    let color = $(this).attr('class').split(' ')[2]
     if(color == 'black-color') {
       color = ''
       console.log('it\'s black')

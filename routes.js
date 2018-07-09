@@ -9,7 +9,7 @@ const views = __dirname + '/views'
 //   "pass": "abcdefghijklmnop"
 // }
 
-const credentials = require('./gmail-credentials.json')
+const credentials = require(__dirname + '/gmail-credentials.json')
 const send = require('gmail-send')({
   user: credentials.user,
   pass: credentials.pass,
@@ -54,10 +54,10 @@ router.get('*', function(req,res) {
 })
 
 router.post('/about', function(req, res) {
-  var name = req.body.name
-  var email = req.body.email
-  var subject = req.body.subject
-  var message = req.body.message
+  let name = req.body.name
+  let email = req.body.email
+  let subject = req.body.subject
+  let message = req.body.message
   console.log(req.body)
   console.log('sending email from ' + name + ' with address: ' + email);
 
@@ -73,13 +73,13 @@ router.post('/about', function(req, res) {
 })
 
 router.post('/print', function(req, res) {
-  var fromUrl = req.get('Referrer')
-  var fromPage = fromUrl.split('/')[3]
+  let fromUrl = req.get('Referrer')
+  let fromPage = fromUrl.split('/')[3]
   console.log(fromPage)
 
   console.log(req.body)
 
-  var view = views + '/404.html'
+  let view = views + '/404.html'
 
   switch(fromPage) {
     case 'crochet':
