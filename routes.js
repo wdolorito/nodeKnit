@@ -17,7 +17,7 @@ const send = require('gmail-send')({
 })
 
 router.use(function (req, res, next) {
-  console.log(Date.now() + ' ' + req.path + ' ' + req.method)
+  console.log(Date() + ' ' + req.path + ' ' + req.method)
   next()
 })
 
