@@ -61,13 +61,13 @@ router.post('/about', function(req, res) {
   console.log(req.body)
   console.log('sending email from ' + name + ' with address: ' + email);
 
-  // send({
-  //   replyTo: email,
-  //   subject: subject,
-  //   html:    name + ' has sent a message:</br></br>' + message
-  // }, function (err, res) {
-  //   console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
-  // })
+  send({
+    replyTo: email,
+    subject: subject,
+    text:    name + ' has sent a message:\n\n' + message
+  }, function (err, res) {
+    console.log('send() callback returned: err:', err, '; res:', res);
+  })
 
   res.sendFile(views +  '/emailed.html')
 })
