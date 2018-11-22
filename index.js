@@ -14,7 +14,6 @@ try {
 }
 
 app.use(express.static(__dirname + '/static'))
-app.use('/jspdf', express.static(__dirname + '/node_modules/jspdf/dist'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/', router)
 

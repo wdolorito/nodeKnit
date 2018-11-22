@@ -86,20 +86,15 @@ $(document).ready(function() {
       let newLen = $(pat).children().length + 1
       let newRow = returnBlankRow(newLen)
       $(pat).append(newRow)
-      console.log('added row')
-      console.log(newLen)
   })
 
   $('.rem-row').on('click', function() {
     let pat = $('.pattern-area')
     $(pat).children().last().remove()
-    console.log('removed row')
   })
 
   $(document).on('focusin', '.row-spinner', function() {
-    console.log(this.value)
     $(this).attr('oldValue', this.value)
-    console.log($(this).attr('oldValue'))
   })
 
   $(document).on('click', '.print-pattern', function() {
@@ -118,18 +113,13 @@ $(document).ready(function() {
     let curr = this.value
     let dir = curr - prev
 
-    console.log('Previous: ' + prev)
-    console.log('Current: ' + curr)
-
     if(dir >= -1) {
       switch(dir) {
         case 0:
         case 1:
-          console.log('added')
           $(parent).append(blank)
           break
         default:
-          console.log('removed')
           $(parent).children('td').last().remove()
           break
       }
@@ -150,29 +140,18 @@ $(document).ready(function() {
          $(parent.parentNode).removeClass('align-top')
       }
     }
-    console.log('++++++')
-    console.log(parent)
-    console.log(parentLength > 0)
-    console.log('++++++')
   })
 
   $(document).on('click', '.stitch', function() {
     let parent = this.parentNode
     let parentParent = this.parentNode.parentNode
-    console.log($(this).attr('class'))
     if($(this).hasClass('stitch')) { $(this).removeClass('stitch') }
     let lastClass = $(this).attr('class').split(' ').pop()
     $(parent).append(stitchMenu)
     if(lastClass.endsWith('-color')) {
-      console.log('this has a color')
       $(parent).children().not('.color-item').addClass(lastClass)
     }
-    console.log($(this).attr('class'))
-    console.log(parent)
-    console.log(parentParent)
     $(parentParent).addClass('align-top')
-    console.log($(this).attr('class'))
-    console.log($(parentParent).attr('class'))
   })
 
   $(document).on('click', '.menu-item', function() {
@@ -180,12 +159,10 @@ $(document).ready(function() {
     let parent = this.parentNode
     let parentParent = parent.parentNode
     let parentParentLength = $(parentParent).find('.menu-item').length
-    console.log($(this).attr('class'))
     if($(this).hasClass('menu-item')) { $(this).removeClass('menu-item') }
     $(this).addClass('stitch')
     $(parent).empty()
     $(parent).append($(this))
-    console.log(parentParentLength)
     if($(parentParent).hasClass('align-top') && (parentParentLength == menuLength)) {
        $(parentParent).removeClass('align-top')
     }
@@ -193,13 +170,11 @@ $(document).ready(function() {
 
   $(document).on('click', '.color-item', function() {
     length = $(this).children().length
-    console.log(length)
     if(length == 7) {
       $(this).empty()
       return
     }
     $(this).append(colorMenu)
-    console.log($(this))
   })
 
   $(document).on('click', '.color', function() {
@@ -209,16 +184,11 @@ $(document).ready(function() {
     let color = $(this).attr('class').split(' ')[2]
     if(color == 'black-color') {
       color = ''
-      console.log('it\'s black')
     }
-    console.log('===')
-    console.log(color)
-    console.log(parentParent)
     $(parentParent).children().first().removeClass('red-color orange-color yellow-color green-color blue-color indigo-color black-color')
     $(parentParent).children().first().addClass(color)
     $(parentParent).children().first().addClass('stitch')
     $(parentParent).children().slice(1).remove()
-    console.log(parentParentLength)
     if($(parentParent.parentNode).hasClass('align-top') && (parentParentLength == menuLength)) {
        $(parentParent.parentNode).removeClass('align-top')
     }
