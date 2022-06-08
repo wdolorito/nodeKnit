@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import Navbar from '../components/navbar'
 
 export default function About() {
+  const router = useRouter()
+  
   return (
     <>
       <Head>
@@ -14,7 +17,7 @@ export default function About() {
         <h1 className='display-4'>About me</h1>
       </div>
 
-      <Navbar />
+      <Navbar active={ router.pathname } />
 
       <div className='row mb-5'>
         <div className='col'></div>

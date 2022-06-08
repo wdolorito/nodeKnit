@@ -1,18 +1,22 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 import Navbar from '../components/navbar'
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <>
       <Head>
-        <title>Pattern site</title>
+        <title>Yarn work pattern editor</title>
       </Head>
 
       <div className='jumbotron'>
         <h1 className='display-4'>Yarn work pattern editor</h1>
       </div>
 
-      <Navbar />
+      <Navbar active={ router.pathname } />
 
       <div className='row'>
         <div className='col'></div>
