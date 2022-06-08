@@ -28,6 +28,4 @@ export default function handler(req, res) {
       res.redirect('/emailed/true')
     })
   }
-  
-  res.redirect('/emailed/false')
 }

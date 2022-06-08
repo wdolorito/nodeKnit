@@ -48,6 +48,57 @@ export default function About() {
         </div>
         <div className='col'></div>
       </div>
+
+      <div className='row'>
+        <div className='col'></div>
+        <div className='col-9'>
+          <div className='card'>
+            <div className='card-body'>
+              <h1 className='card-title'>Got something to say?</h1>
+              <form action='/api/email' method='post'>
+                <div className='form-group'>
+                  <label htmlFor='namearea'>Name</label>
+                  <textarea name='name'
+                            className='form-control'
+                            id='nameArea'
+                            rows='1'
+                            placeholder='A Name'
+                            required></textarea>
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='email'>Email address</label>
+                  <input name='email'
+                         type='email'
+                         className='form-control'
+                         id='email'
+                         placeholder='name@example.com'
+                         required></input>
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='subjectArea'>Subject</label>
+                  <textarea name='subject'
+                            className='form-control'
+                            id='subjectArea'
+                            rows='1'
+                            placeholder='Howdy!'
+                            required></textarea>
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='messageArea'>Message</label>
+                  <textarea name='message'
+                            className='form-control'
+                            id='messageArea'
+                            rows='3'
+                            placeholder='Your site is handy!'
+                            required></textarea>
+                </div>
+                <button type='submit' className='btn btn-light'>Send me an email!</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className='col'></div>
+      </div>
     </>
   )
 }
