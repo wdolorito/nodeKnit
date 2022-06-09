@@ -1,0 +1,7 @@
+Running this project is far more interesting that reading this README file.  To do that, `npm i` in the root of this repo, then `npm run dev` or `npm start` after creating that `gmail-credentials.json` file mentioned in `routes.js`.  There's also the [NextJS](https://nextjs.org) project in the `nextjs/` folder.  `cd` there, `npm i`, then `npm run dev`.
+
+[ExpressJS](https://expressjs.com/) handles the main project, which more easily hides the behind the scenes the `gmail-send` package does for the form on the about page.  There's an annoying number of files under `views` because each page had to be created individually (copy that `template.html` to something else, then edit) and added to `routes.js`.
+
+The `nextjs` folder is a little nicer in some respects, but inconvient in other areas.  Page creation is easier, not having to rewrite all the boilerplate (handled in `_document.js` and `_app.js`), however the heavy js dom manipulation done on the pattern pages was a giant pain and need some heavy rethinking to port that over.  Instead of rewriting those pages to work within Next, they're being statically served, supporting js + css and all.  Exporting a static site was out of the question anyway, since the `api routes` feature of Next was used to do the server side processing for `gmail-send`.
+
+That's it, in not so brief.  Just demo code to serve some images created soley using css.  Enjoy.
