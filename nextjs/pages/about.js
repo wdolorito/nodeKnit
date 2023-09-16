@@ -26,8 +26,8 @@ export default function About() {
             <div className='card-body'>
               <h1 className='card-title'>Site junk</h1>
               <p className='card-text'>This site was built using <Link href='https://nodejs.org/en/' passHref><a target='_blank'>Node.js.</a></Link></p>
-              <p className='card-text'>Styling components are Twitter's <Link href='https://getbootstrap.com' passHref><a target='_blank'>Bootstrap</a></Link> if y'all hadn't guessed. ;) With the default theme no less because I have no imagination, hah</p>
-              <p className='card-text'>It's naive and simple incorporating the <Link href='https://nextjs.org/' passHref><a target='_blank'>NextJS</a></Link> framework and can conceivably run on pretty much anything.</p>
+              <p className='card-text'>Styling components are Twitter&apos;s <Link href='https://getbootstrap.com' passHref><a target='_blank'>Bootstrap</a></Link> if y&apos;all hadn&apos;t guessed. ;) With the default theme no less because I have no imagination, hah</p>
+              <p className='card-text'>It&apos;s naive and simple incorporating the <Link href='https://nextjs.org/' passHref><a target='_blank'>NextJS</a></Link> framework and can conceivably run on pretty much anything.</p>
             </div>
           </div>
         </div>
@@ -40,9 +40,9 @@ export default function About() {
           <div className='card'>
             <div className='card-body'>
               <h1 className='card-title'>Me</h1>
-              <p className='card-text'>There's not much to say about myself other than I willingly identify as any pejorative you would have to describe someone who knows a little too much about nothing.</p>
-              <p className='card-text'>I'm in to lots of clich&eacute; tech things. I'm a filthy casual that likes watching (a little too much) other people way more skilled at button mashing than myself on <Link href='https://www.twitch.tv' passHref><a target='_blank'>Twitch.</a></Link></p>
-              <h3 className='card-text'>I'm also a really big fan of yarn work!!</h3>
+              <p className='card-text'>There&apos;s not much to say about myself other than I willingly identify as any pejorative you would have to describe someone who knows a little too much about nothing.</p>
+              <p className='card-text'>I&apos;m in to lots of clich&eacute; tech things. I&apos;m a filthy casual that likes watching (a little too much) other people way more skilled at button mashing than myself on <Link href='https://www.twitch.tv' passHref><a target='_blank'>Twitch.</a></Link></p>
+              <h3 className='card-text'>I&apos;m also a really big fan of yarn work!!</h3>
             </div>
           </div>
         </div>
